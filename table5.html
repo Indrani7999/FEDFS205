@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Tables with Double Borders</title>
+    <style>
+        .outer {
+            border: 4px double green;         /* Double green border */
+            border-collapse: collapse;
+        }
+        .outer td {
+            border: 3px double green;         /* Inner green cells with double border */
+            padding: 10px;
+            text-align: center;
+        }
+        .inner {
+            border: 3px double blue;          /* Double blue border */
+            border-collapse: collapse;
+        }
+        .inner td {
+            border: 2px double blue;          /* Inner blue cells with double border */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<table class="outer">
+    <tr>
+        <td rowspan="3">Table 1</td>
+        <td>Table 1</td>
+    </tr>
+    <tr>
+        <td>
+            <table class="inner">
+                <tr>
+                    <td>Table 2</td>
+                    <td>Table 2</td>
+                </tr>
+                <tr>
+                    <td>Table 2</td>
+                    <td>Table 2</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="border: 2px double green;">Table 1</td>
+                    <td style="border: 2px double green;">Table 1</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
