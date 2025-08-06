@@ -1,0 +1,36 @@
+html5demo1.html                                                                            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Form Enhancements</title>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter full name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="website">Website:</label>
+    <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100"><br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit phone number"><br><br>
+
+    <label for="dob">DOB:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label for="favcolor">Favorite Color:</label>
+    <input type="color" id="favcolor" name="favcolor"><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+
+</body>
+</html>

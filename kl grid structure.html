@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Display</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header header"
+                "box1 box2 box3 sidebar"
+                "main main main sidebar"
+                "footer footer footer footer";
+            grid-template-columns: 0.9fr 0.9fr 0.9fr 1.3fr; /* Adjusted width of boxes & sidebar */
+            grid-template-rows: auto 100px 1.5fr auto;     /* ⬅️ Adjusted row heights */
+            gap: 0px;
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: lightcoral;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .box1, .box2, .box3 {
+            padding: 20px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box1 {
+            grid-area: box1;
+            background-color: lightgreen;
+        }
+
+        .box2 {
+            grid-area: box2;
+            background-color: cadetblue;
+        }
+
+        .box3 {
+            grid-area: box3;
+            background-color: lightpink;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: goldenrod;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: plum;
+            text-align: center;
+            padding: 40px;
+            font-weight: bold;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: lightsteelblue;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">KL University</div>
+        <div class="box1">Small box1</div>
+        <div class="box2">Small box2</div>
+        <div class="box3">Small box3</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main Content</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

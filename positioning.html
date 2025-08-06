@@ -1,0 +1,101 @@
+position.html                                                                         <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Positioning Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .static-box {
+      background-color: #7f8c8d;
+      position: static;
+    }
+
+    .relative-box {
+      background-color: #3498db;
+      position: relative;
+      top: 10px;
+      left: 30px;
+    }
+
+    .absolute-container {
+      position: relative;
+      background: #ecf0f1;
+      padding: 50px;
+      border: 2px dashed #ccc;
+      margin-bottom: 20px;
+    }
+
+    .absolute-box {
+      background-color: #e74c3c;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .fixed-box {
+      background-color: #27ae60;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .sticky-box {
+      background-color: #f39c12;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .spacer {
+      height: 1000px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Static (default)</h2>
+  <div class="box static-box">Static</div>
+
+  <h2>Relative</h2>
+  <div class="box relative-box">Relative (moved 10px down, 30px right)</div>
+
+  <h2>Absolute (inside relative container)</h2>
+  <div class="absolute-container">
+    <div class="box absolute-box">Absolute</div>
+    <p>This container is <strong>relative</strong>. The red box is positioned absolutely inside it.</p>
+  </div>
+
+  <h2>Sticky (scroll to see effect)</h2>
+  <div class="box sticky-box">Sticky (sticks to top)</div>
+
+  <div class="spacer">
+    <p>Scroll down to see how the sticky and fixed boxes behave.</p>
+  </div>
+
+  <div class="box fixed-box">Fixed (bottom-right corner)</div>
+
+</body>
+</html>

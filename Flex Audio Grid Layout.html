@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flex and Block Demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .outerdiv {
+      border: 3px solid green;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .outerdiv > div {
+      flex: 1 1 150px;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    .div1 { background-color: aquamarine; color: black; }
+    .div2 { background-color: blueviolet; }
+    .div3 { background-color: rgb(210, 214, 169); color: black; }
+    .div4 { background-color: #ffccdd; color: black; }
+    .div5 { background-color: rgb(111, 95, 182); }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="outerdiv">
+    <div class="div1">Division 1</div>
+    <div class="div2">Division 2</div>
+    <div class="div3">Division 3</div>
+    <div class="div4">
+      Division 4 is meant for audio file
+      <audio controls>
+        <source src="your-audio-file.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="div5">Division 5</div>
+  </div>
+
+</body>
+</html>
